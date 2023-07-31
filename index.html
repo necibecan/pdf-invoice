@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Invoice Generator</title>
+    <!-- <script src="src/index.js"></script> -->
+    <script src="src/html2pdf.bundle.js"></script>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+    <div class="a4" id="myPdfFile">
+        <div class="container">
+            <div>
+                <img src="logo.jpeg" style="width: 100%;
+            height: auto;" alt="Foto 1">
+                <div class="topText">
+                    <label for="textarea">SAYIN,</label>
+                    <textarea></textarea>
+                </div>
+            </div>
+            <div class="faturaBolumu">
+                <img src="maliye.jpeg" alt="Foto 2">
+                <table class="faturaTablo">
+                    <tr>
+                        <th>FATURA</th>
+                    </tr>
+                    <tr>
+                        <th>Seri: A</th>
+                    </tr>
+                    <th>Sıra No:</th>
+                    <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <th>Tarih:</th>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <th>İrsaliye Tarih:</th>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <th>İrsaliye No:</th>
+                        <td><input type="text"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="container">
+            <label for="">MÜŞTERİ V.D.: </label>
+            <input type="text">
+            <label for="">HES.NO:</label>
+            <input type="text">
+        </div>
+        <table class="miktarTablo">
+            <tr>
+                <th>Miktar</th>
+                <th>Malın Cinsi</th>
+                <th>Birim Fiyatı</th>
+                <th>Tutarı</th>
+            </tr>
+            <!-- Fill this 20 times -->
+            <tr>
+                <td class="tableRowElement"><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <!-- I've added extra lines for you here -->
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <!-- Repeat above block 18 more times to get total of 20 rows -->
+
+        </table>
+        <div class="container">
+            <div>
+                YALNIZ
+                <textarea style="width: 100%; height: 80px; border:0;resize: none;"></textarea>
+                TL'dir
+            </div>
+            <div>
+                <table class="toplamTablo">
+                    <tr>
+                        <th>Toplam</th>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <th>KDV%</th>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <th>G.Toplam</th>
+                        <td><input type="text"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div style="display: flex;justify-content: center;align-items: center;">
+        <button  id="yazdir" class="yazdirBtn">Yazdır</button>
+    </div>
+</body>
+<script>
+    document.getElementById("yazdir").addEventListener("click", function download() {
+  const element = document.getElementById("myPdfFile");
+  var opt = {
+    margin:       0,
+    filename:     'myfile.pdf',
+    image:        { type: 'jpeg', quality: 0.98 },
+    html2canvas:  { scale: 5, scrollY: 0 },
+    jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+  };
+  html2pdf().from(element).set(opt).save();
+});
+</script>
+</html>

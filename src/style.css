@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+@page{margin: 0;}
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.container div {
+    width: 48%;
+}
+.container img {
+    max-width: 100%;
+    height: auto;
+}
+textarea {
+    width: 100%;
+    height: 150px;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+table input[type=text] {
+    width: 100%;
+    border: 0;
+
+}
+.yazdirBtn{
+    
+    width: 30%;
+    height: 50px;
+    background-color: yellow;
+    border: 0px;
+    border-radius: 15px;
+    margin: 15px;
+}
+.yazdirBtn:hover{
+    background-color: yellowgreen;
+}
+
+
+.a4 {
+    /* height: 1122px;
+    width: 794px;
+    margin: auto; */
+    margin: 0;
+    /* border: 1px solid #000; */
+    padding: 30px;
+}
+.faturaBolumu{
+    display: inline-flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+
+
+.faturaBolumu > img{
+    margin: 30% 0px 0px 0px;
+    width: 40%;
+}
+
+.faturaTablo{
+    margin-top: auto;
+    border: 0;
+}
+.faturaTablo > tbody > tr > th, .faturaTablo > tbody > tr > td{
+    width: 50%;
+    text-align: left;
+    border: 0;
+}
+.miktarTablo > tbody > tr > th, .miktarTablo > tbody > tr > td{
+    height: fit-content;
+    padding: 0 10px;
+}
+
+.miktarTablo > tbody > tr > th:nth-child(1), .miktarTablo > tbody > tr > td:nth-child(1){
+    width: 10%;
+}
+.miktarTablo > tbody > tr > th:nth-child(2), .miktarTablo > tbody > tr > td:nth-child(2){
+    width: auto;
+}
+
+.miktarTablo > tbody > tr > th:nth-child(3), .miktarTablo > tbody > tr > td:nth-child(3){
+    width: 15%;
+}
+.miktarTablo > tbody > tr > th:nth-child(4), .miktarTablo > tbody > tr > td:nth-child(4){
+    width: 15%;
+}
+
+.tableRowElement{
+    padding: 0 8px;
+}
+.topText{
+    width: 100%!important;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+}
+.topText > textarea{
+    width: 100%;
+    border: 0;
+    resize: none;
+}
+
+.toplamTablo > tbody > tr > th, .faturaTablo > tbody > tr > td{
+    width: 50%;
+    margin-top: auto;
+}
+input[type=text]{
+    border: 0;
+}
