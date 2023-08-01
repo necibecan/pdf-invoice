@@ -18,7 +18,8 @@
             height: auto;" alt="Foto 1">
                 <div class="topText">
                     <label for="textarea">SAYIN,</label>
-                    <textarea></textarea>
+                    <textarea
+                        placeholder="................................................................................"></textarea>
                 </div>
             </div>
             <div class="faturaBolumu">
@@ -31,28 +32,26 @@
                         <th>Seri: A</th>
                     </tr>
                     <th>Sıra No:</th>
-                    <td><input type="text"></td>
+                    <td><input type="text" style="border: 2px solid black;"></td>
                     </tr>
                     <tr>
                         <th>Tarih:</th>
-                        <td><input type="text"></td>
+                        <td><input type="date" style="border: 2px solid black;"></td>
                     </tr>
                     <tr>
                         <th>İrsaliye Tarih:</th>
-                        <td><input type="text"></td>
+                        <td><input type="date" style="border: 2px solid black;"></td>
                     </tr>
                     <tr>
                         <th>İrsaliye No:</th>
-                        <td><input type="text"></td>
+                        <td><input type="text" style="border: 2px solid black;"></td>
                     </tr>
                 </table>
             </div>
         </div>
         <div class="container">
-            <label for="">MÜŞTERİ V.D.: </label>
-            <input type="text">
-            <label for="">HES.NO:</label>
-            <input type="text">
+            <label style="font-size: 10pt;">MÜŞTERİ V.D.: 111111</label>
+            <label style="font-size: 10pt;">HES.NO: 111111</label>
         </div>
         <table class="miktarTablo">
             <tr>
@@ -61,170 +60,213 @@
                 <th>Birim Fiyatı</th>
                 <th>Tutarı</th>
             </tr>
-            <!-- Fill this 20 times -->
             <tr>
-                <td class="tableRowElement"><input type="text"></td>
+                <td class="tableRowElement"><input id="miktar1" type="number" oninput="calculate(1)"></td>
                 <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-            </tr>
-            <!-- I've added extra lines for you here -->
-            <tr>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input id="birim1" type="number" oninput="calculate(1)"></td>
+                <td><input id="tutar1" type="number" readonly></td>
             </tr>
             <tr>
+                <td class="tableRowElement"><input id="miktar2" type="number" oninput="calculate(2)"></td>
                 <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input id="birim2" type="number" oninput="calculate(2)"></td>
+                <td><input id="tutar2" type="number" readonly></td>
             </tr>
             <tr>
+                <td class="tableRowElement"><input id="miktar3" type="number" oninput="calculate(3)"></td>
                 <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input id="birim3" type="number" oninput="calculate(3)"></td>
+                <td><input id="tutar3" type="number" readonly></td>
             </tr>
             <tr>
+                <td class="tableRowElement"><input id="miktar4" type="number" oninput="calculate(4)"></td>
                 <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input id="birim4" type="number" oninput="calculate(4)"></td>
+                <td><input id="tutar4" type="number" readonly></td>
             </tr>
             <tr>
+                <td class="tableRowElement"><input id="miktar5" type="number" oninput="calculate(5)"></td>
                 <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input id="birim5" type="number" oninput="calculate(5)"></td>
+                <td><input id="tutar5" type="number" readonly></td>
             </tr>
             <tr>
+                <td class="tableRowElement"><input id="miktar6" type="number" oninput="calculate(6)"></td>
                 <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input id="birim6" type="number" oninput="calculate(6)"></td>
+                <td><input id="tutar6" type="number" readonly></td>
             </tr>
             <tr>
+                <td class="tableRowElement"><input id="miktar7" type="number" oninput="calculate(7)"></td>
                 <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input id="birim7" type="number" oninput="calculate(7)"></td>
+                <td><input id="tutar7" type="number" readonly></td>
             </tr>
             <tr>
+                <td class="tableRowElement"><input id="miktar8" type="number" oninput="calculate(8)"></td>
                 <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input id="birim8" type="number" oninput="calculate(8)"></td>
+                <td><input id="tutar8" type="number" readonly></td>
             </tr>
             <tr>
+                <td class="tableRowElement"><input id="miktar9" type="number" oninput="calculate(9)"></td>
                 <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input id="birim9" type="number" oninput="calculate(9)"></td>
+                <td><input id="tutar9" type="number" readonly></td>
             </tr>
             <tr>
+                <td class="tableRowElement"><input id="miktar10" type="number" oninput="calculate(10)"></td>
                 <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input id="birim10" type="number" oninput="calculate(10)"></td>
+                <td><input id="tutar10" type="number" readonly></td>
             </tr>
             <tr>
+                <td class="tableRowElement"><input id="miktar11" type="number" oninput="calculate(11)"></td>
                 <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input id="birim11" type="number" oninput="calculate(11)"></td>
+                <td><input id="tutar11" type="number" readonly></td>
             </tr>
             <tr>
+                <td class="tableRowElement"><input id="miktar12" type="number" oninput="calculate(12)"></td>
                 <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input id="birim12" type="number" oninput="calculate(12)"></td>
+                <td><input id="tutar12" type="number" readonly></td>
             </tr>
             <tr>
+                <td class="tableRowElement"><input id="miktar13" type="number" oninput="calculate(13)"></td>
                 <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input id="birim13" type="number" oninput="calculate(13)"></td>
+                <td><input id="tutar13" type="number" readonly></td>
             </tr>
             <tr>
+                <td class="tableRowElement"><input id="miktar14" type="number" oninput="calculate(14)"></td>
                 <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input id="birim14" type="number" oninput="calculate(14)"></td>
+                <td><input id="tutar14" type="number" readonly></td>
             </tr>
             <tr>
+                <td class="tableRowElement"><input id="miktar15" type="number" oninput="calculate(15)"></td>
                 <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input id="birim15" type="number" oninput="calculate(15)"></td>
+                <td><input id="tutar15" type="number" readonly></td>
             </tr>
             <tr>
+                <td class="tableRowElement"><input id="miktar16" type="number" oninput="calculate(16)"></td>
                 <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input id="birim16" type="number" oninput="calculate(16)"></td>
+                <td><input id="tutar16" type="number" readonly></td>
             </tr>
             <tr>
+                <td class="tableRowElement"><input id="miktar17" type="number" oninput="calculate(17)"></td>
                 <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input id="birim17" type="number" oninput="calculate(17)"></td>
+                <td><input id="tutar17" type="number" readonly></td>
             </tr>
             <tr>
+                <td class="tableRowElement"><input id="miktar18" type="number" oninput="calculate(18)"></td>
                 <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input id="birim18" type="number" oninput="calculate(18)"></td>
+                <td><input id="tutar18" type="number" readonly></td>
             </tr>
             <tr>
+                <td class="tableRowElement"><input id="miktar19" type="number" oninput="calculate(19)"></td>
                 <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input id="birim19" type="number" oninput="calculate(19)"></td>
+                <td><input id="tutar19" type="number" readonly></td>
             </tr>
-            <!-- Repeat above block 18 more times to get total of 20 rows -->
-
+            <tr>
+                <td class="tableRowElement"><input id="miktar20" type="number" oninput="calculate(20)"></td>
+                <td><input type="text"></td>
+                <td><input id="birim20" type="number" oninput="calculate(20)"></td>
+                <td><input id="tutar20" type="number" readonly></td>
+            </tr>
         </table>
         <div class="container">
             <div>
                 YALNIZ
-                <textarea style="width: 100%; height: 80px; border:0;resize: none;"></textarea>
+                <textarea
+                    style="width: 100%; height: 80px; border:1px solıd black; border-radius: 15px; resize: none;"></textarea>
                 TL'dir
             </div>
-            <div>
+            <div class="container">
                 <table class="toplamTablo">
                     <tr>
                         <th>Toplam</th>
-                        <td><input type="text"></td>
+                        <td><input id="toplam" type="text" readonly></td>
                     </tr>
                     <tr>
                         <th>KDV%</th>
-                        <td><input type="text"></td>
+                        <td><input id="kdv" type="text" readonly></td>
                     </tr>
                     <tr>
                         <th>G.Toplam</th>
-                        <td><input type="text"></td>
+                        <td><input id="grandToplam" type="text" readonly></td>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
     <div style="display: flex;justify-content: center;align-items: center;">
-        <button  id="yazdir" class="yazdirBtn">Yazdır</button>
+        <button id="yazdir" class="yazdirBtn">Yazdır</button>
     </div>
+
 </body>
 <script>
+    function calculate(id) {
+        var miktar = document.getElementById('miktar' + id).value;
+        var birim = document.getElementById('birim' + id).value;
+
+        if (miktar && birim) {
+            document.getElementById('tutar' + id).value = parseFloat(miktar) * parseFloat(birim);
+        }
+    }
+    function calculate(id) {
+        var miktar = document.getElementById('miktar' + id).value;
+        var birim = document.getElementById('birim' + id).value;
+
+        if (miktar && birim) {
+            document.getElementById('tutar' + id).value = parseFloat(miktar) * parseFloat(birim);
+            calculateTotal();
+            calculateKDV();
+            calculateGrandTotal();
+        }
+    }
+
+    function calculateTotal() {
+        var total = 0;
+        for (var i = 1; i <= 20; i++) {
+            var tutar = parseFloat(document.getElementById('tutar' + i).value);
+            if (!isNaN(tutar)) {
+                total += tutar;
+            }
+        }
+        document.getElementById('toplam').value = total;
+    }
+
+    function calculateKDV() {
+        var total = parseFloat(document.getElementById('toplam').value);
+        var kdvPercentage = 0.18; // %18 KDV
+        var kdv = parseInt(total * kdvPercentage);
+        document.getElementById('kdv').value = kdv;
+    }
+
+    function calculateGrandTotal() {
+        var total = parseFloat(document.getElementById('toplam').value);
+        var kdv = parseFloat(document.getElementById('kdv').value);
+        var grandTotal = total + kdv;
+        document.getElementById('grandToplam').value = grandTotal;
+    }
+
     document.getElementById("yazdir").addEventListener("click", function download() {
-  const element = document.getElementById("myPdfFile");
-  var opt = {
-    margin:       0,
-    filename:     'myfile.pdf',
-    image:        { type: 'jpeg', quality: 0.98 },
-    html2canvas:  { scale: 5, scrollY: 0 },
-    jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-  };
-  html2pdf().from(element).set(opt).save();
-});
+        const element = document.getElementById("myPdfFile");
+        var opt = {
+            margin: 0,
+            filename: 'myfile.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 5, scrollY: 0 },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+        html2pdf().from(element).set(opt).save();
+    });
 </script>
 </html>
