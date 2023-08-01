@@ -88,8 +88,14 @@ textarea {
     height: fit-content;
     padding: 0 10px;
 }
+.miktarTablo {
+    width: 100%;
+    table-layout: fixed; /* Set table layout to fixed */
+    border-collapse: collapse;
+}
 
-.miktarTablo > tbody > tr > th:nth-child(1), .miktarTablo > tbody > tr > td:nth-child(1){
+
+/* .miktarTablo > tbody > tr > th:nth-child(1), .miktarTablo > tbody > tr > td:nth-child(1){
     width: 10%;
 }
 .miktarTablo > tbody > tr > th:nth-child(2), .miktarTablo > tbody > tr > td:nth-child(2){
@@ -101,8 +107,30 @@ textarea {
 }
 .miktarTablo > tbody > tr > th:nth-child(4), .miktarTablo > tbody > tr > td:nth-child(4){
     width: 15%;
+} */
+.miktarTablo th:nth-child(1),
+.miktarTablo td:nth-child(1) {
+    width: 10%; /* Set the first column width to 10% */
 }
 
+.miktarTablo th:nth-child(2),
+.miktarTablo td:nth-child(2) {
+    width: 60%; /* Set the second column width to 60% */
+}
+
+.miktarTablo th:nth-child(3),
+.miktarTablo td:nth-child(3),
+.miktarTablo th:nth-child(4),
+.miktarTablo td:nth-child(4) {
+    width: 15%; /* Set the third and fourth column widths to 15% each */
+}
+.miktarTablo input[type="number"],
+.miktarTablo input[type="text"] {
+    width: 100%;
+    border: 0;
+    box-sizing: border-box;
+}
+/* Set the input fields inside the table cells to fill the entire cell width */
 .tableRowElement{
     padding: 0 8px;
 }
