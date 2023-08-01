@@ -28,8 +28,8 @@
                         <th>FATURA</th>
                     </tr>
                     <tr>
-                        <th>Seri: A</th>
-                        <td><input type="text" style="border: 2px solid black;"></td>
+                        <th>Seri: </th>
+                        <td><input type="text" style="border: 2px solid black;" id="fixedInput" oninput="handleInput()" value="A"></td>
                     </tr>
                     <th>Sıra No:</th>
                     <td><input type="text" style="border: 2px solid black;"></td>
@@ -256,6 +256,16 @@
         var grandTotal = total + kdv;
         document.getElementById('grandToplam').value = grandTotal;
     }
+
+    function handleInput() {
+            const fixedBeginning = 'A'; 
+            const inputElement = document.getElementById('fixedInput');
+            const inputValue = inputElement.value;
+
+            if (!inputValue.startsWith(fixedBeginning)) {
+                inputElement.value = fixedBeginning + inputValue;
+            }
+        }
 
     document.getElementById("yazdir").addEventListener("click", function download() {
         const element = document.getElementById("myPdfFile");
