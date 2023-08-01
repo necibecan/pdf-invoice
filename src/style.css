@@ -65,7 +65,9 @@ table input[type=text] {
     align-items: flex-start;
     flex-direction: row;
 }
-
+textarea {
+    white-space: pre-wrap;
+}
 
 
 .faturaBolumu > img{

@@ -29,7 +29,8 @@
                     </tr>
                     <tr>
                         <th>Seri: </th>
-                        <td><input type="text" style="border: 2px solid black;" id="fixedInput" oninput="handleInput()" value="A"></td>
+                        <td><input type="text" style="border: 2px solid black;" id="fixedInput" oninput="handleInput()"
+                                value="A"></td>
                     </tr>
                     <th>Sıra No:</th>
                     <td><input type="text" style="border: 2px solid black;"></td>
@@ -46,12 +47,25 @@
                         <th>İrsaliye No:</th>
                         <td><input type="text" style="border: 2px solid black;"></td>
                     </tr>
+                    <tr>
+                        <th>Adres:</th>
+                        <td><textarea id="myTextArea1" style="
+                            height: 80px;
+                            resize: none;
+                            border: 2px solid black;
+                            word-wrap: break-word;
+                            overflow-wrap: break-word;
+                        "></textarea>
+                            <div style="width: 100%; font-size: 10pt; display: none; border: 2px solid black; word-wrap: break-word;"
+                                id="displayTextArea1"></div>
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>
         <div class="container">
             <label style="font-size: 10pt;">MÜŞTERİ V.D.: 5120214358</label>
-            <label style="font-size: 10pt;">HES.NO: 111111</label>
+            <label style="font-size: 10pt;">HES.NO: 837392</label>
         </div>
         <table class="miktarTablo">
             <tr>
@@ -184,8 +198,10 @@
         <div class="container">
             <div>
                 YALNIZ
-                <textarea
+                <textarea id="textArea2"
                     style="width: 100%; height: 80px; border:1px solıd black; border-radius: 15px; resize: none;"></textarea>
+                <div style="width: 100%; font-size: 10pt; display: none; border: 2px solid black; word-wrap: break-word;"
+                    id="displayTextArea2"></div>
                 TL'dir
             </div>
             <div class="container">
@@ -258,25 +274,59 @@
     }
 
     function handleInput() {
-            const fixedBeginning = 'A'; 
-            const inputElement = document.getElementById('fixedInput');
-            const inputValue = inputElement.value;
+        const fixedBeginning = 'A';
+        const inputElement = document.getElementById('fixedInput');
+        const inputValue = inputElement.value;
 
-            if (!inputValue.startsWith(fixedBeginning)) {
-                inputElement.value = fixedBeginning + inputValue;
-            }
+        if (!inputValue.startsWith(fixedBeginning)) {
+            inputElement.value = fixedBeginning + inputValue;
         }
+    }
+
+    function insertBreaks(text) {
+    let result = '';
+    for(let i = 0; i < text.length; i++) {
+        if (i > 0 && i % 15 === 0) {
+            result += '<br/>';
+        }
+        result += text[i];
+    }
+    return result;
+}
+
 
     document.getElementById("yazdir").addEventListener("click", function download() {
         const element = document.getElementById("myPdfFile");
+        const textarea = document.getElementById("myTextArea1");
+        const textarea2 = document.getElementById("textArea2");
+        const display = document.getElementById("displayTextArea1");
+        const display2 = document.getElementById("displayTextArea2");
+
+        display.innerHTML = insertBreaks(textarea.value);
+        display2.innerHTML = insertBreaks(textarea2.value);
+        display.style.display = 'block';
+        textarea.style.display = 'none';
+        display2.style.display = 'block';
+        textarea2.style.display = 'none';
         var opt = {
             margin: 0,
             filename: 'myfile.pdf',
             image: { type: 'jpeg', quality: 0.98 },
             html2canvas: { scale: 5, scrollY: 0 },
-            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+            wrapContent: true
         };
         html2pdf().from(element).set(opt).save();
+
+        setTimeout(() => {
+            display.style.display = 'none';
+            textarea.style.display = 'block';
+            display2.style.display = 'none';
+            textarea2.style.display = 'block';
+        }, 1500);
     });
+
+
 </script>
+
 </html>
