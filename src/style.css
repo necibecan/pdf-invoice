@@ -74,6 +74,25 @@ textarea {
     margin: 30% 0px 0px 0px;
     width: 35%;
 }
+/* Diğer stiller */
+
+.seriLetterWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.seriLetter {
+    font-size: 120%; /* veya istediğiniz boyutu belirleyin */
+    font-weight: bold;
+    margin-right: 5px; /* 'A' harfinin konumunu ayarlamak için */
+}
+
+#fixedInput {
+    font-size: inherit;
+    font-weight: normal;
+    border: 2px solid black;
+    padding: 2px;
+}
 
 .faturaTablo{
     margin-top: auto;

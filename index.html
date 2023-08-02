@@ -18,7 +18,16 @@
             height: auto;" alt="Foto 1">
                 <div class="topText">
                     <label for="textarea">SAYIN,</label>
-                    <textarea readonly>Murat Vehbi Karahan</textarea>
+                    <textarea readonly style="width: 100%; border: 0; resize: none; font-size: 16px; height: 40px;">Murat Vehbi Karahan</textarea>
+                    <label for="textarea">Adres:</label>
+                    <div style="
+                            height: 80px;
+                            resize: none;
+                            word-wrap: break-word;
+                            overflow-wrap: break-word;
+                        " >204 Newburgh Avenue <br/> Medford NY 11763-3117
+                            </div>
+                            
                 </div>
             </div>
             <div class="faturaBolumu">
@@ -28,9 +37,13 @@
                         <th>FATURA</th>
                     </tr>
                     <tr>
-                        <th>Seri: </th>
-                        <td><input type="text" style="border: 2px solid black;" id="fixedInput" oninput="handleInput()"
-                                value="A"></td>
+                        <th>Seri:</th>
+                    <td>
+                        <div class="seriLetterWrapper" style="width: 100%;">
+                            <span class="seriLetter">A</span>
+                            <input type="text" style="border: 2px solid black;" id="fixedInput" >
+                        </div>
+                    </td>
                     </tr>
                     <th>Sıra No:</th>
                     <td><input type="text" style="border: 2px solid black;"></td>
@@ -46,19 +59,6 @@
                     <tr>
                         <th>İrsaliye No:</th>
                         <td><input type="text" style="border: 2px solid black;"></td>
-                    </tr>
-                    <tr>
-                        <th>Adres:</th>
-                        <td><textarea id="myTextArea1" style="
-                            height: 80px;
-                            resize: none;
-                            border: 2px solid black;
-                            word-wrap: break-word;
-                            overflow-wrap: break-word;
-                        "></textarea>
-                            <div style="width: 100%; font-size: 10pt; display: none; border: 2px solid black; word-wrap: break-word;"
-                                id="displayTextArea1"></div>
-                        </td>
                     </tr>
                 </table>
             </div>
@@ -164,36 +164,7 @@
                 <td><input id="birim15" type="number" oninput="calculate(15)"></td>
                 <td><input id="tutar15" type="number" readonly></td>
             </tr>
-            <tr>
-                <td class="tableRowElement"><input id="miktar16" type="number" oninput="calculate(16)"></td>
-                <td><input type="text"></td>
-                <td><input id="birim16" type="number" oninput="calculate(16)"></td>
-                <td><input id="tutar16" type="number" readonly></td>
-            </tr>
-            <tr>
-                <td class="tableRowElement"><input id="miktar17" type="number" oninput="calculate(17)"></td>
-                <td><input type="text"></td>
-                <td><input id="birim17" type="number" oninput="calculate(17)"></td>
-                <td><input id="tutar17" type="number" readonly></td>
-            </tr>
-            <tr>
-                <td class="tableRowElement"><input id="miktar18" type="number" oninput="calculate(18)"></td>
-                <td><input type="text"></td>
-                <td><input id="birim18" type="number" oninput="calculate(18)"></td>
-                <td><input id="tutar18" type="number" readonly></td>
-            </tr>
-            <tr>
-                <td class="tableRowElement"><input id="miktar19" type="number" oninput="calculate(19)"></td>
-                <td><input type="text"></td>
-                <td><input id="birim19" type="number" oninput="calculate(19)"></td>
-                <td><input id="tutar19" type="number" readonly></td>
-            </tr>
-            <tr>
-                <td class="tableRowElement"><input id="miktar20" type="number" oninput="calculate(20)"></td>
-                <td><input type="text"></td>
-                <td><input id="birim20" type="number" oninput="calculate(20)"></td>
-                <td><input id="tutar20" type="number" readonly></td>
-            </tr>
+            
         </table>
         <div class="container">
             <div>
@@ -211,7 +182,7 @@
                         <td><input id="toplam" type="text" readonly></td>
                     </tr>
                     <tr>
-                        <th>KDV%</th>
+                        <th>KDV%18</th>
                         <td><input id="kdv" type="text" readonly></td>
                     </tr>
                     <tr>
@@ -250,8 +221,9 @@
 
     function calculateTotal() {
         var total = 0;
-        for (var i = 1; i <= 20; i++) {
-            var tutar = parseFloat(document.getElementById('tutar' + i).value);
+        for (var i = 1; i <= 15; i++) {
+            var element = document.getElementById('tutar' + i);
+            var tutar = parseFloat(element.value);
             if (!isNaN(tutar)) {
                 total += tutar;
             }
@@ -297,15 +269,10 @@
 
     document.getElementById("yazdir").addEventListener("click", function download() {
         const element = document.getElementById("myPdfFile");
-        const textarea = document.getElementById("myTextArea1");
         const textarea2 = document.getElementById("textArea2");
-        const display = document.getElementById("displayTextArea1");
         const display2 = document.getElementById("displayTextArea2");
 
-        display.innerHTML = insertBreaks(textarea.value);
         display2.innerHTML = insertBreaks(textarea2.value);
-        display.style.display = 'block';
-        textarea.style.display = 'none';
         display2.style.display = 'block';
         textarea2.style.display = 'none';
         var opt = {
@@ -319,8 +286,6 @@
         html2pdf().from(element).set(opt).save();
 
         setTimeout(() => {
-            display.style.display = 'none';
-            textarea.style.display = 'block';
             display2.style.display = 'none';
             textarea2.style.display = 'block';
         }, 1500);
