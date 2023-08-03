@@ -169,6 +169,17 @@ textarea {
     width: 50%;
     margin-top: auto;
 }
+.toplamTablo td {
+    position: relative;
+}
+
+.toplamTablo td span {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 input[type=text]{
     border: 0;
 }

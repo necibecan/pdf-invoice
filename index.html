@@ -189,6 +189,14 @@
                         <th>G.Toplam</th>
                         <td><input id="grandToplam" type="text" readonly></td>
                     </tr>
+                    <script>
+                        window.onload = function() {
+                            var toplamInput = document.getElementById("toplam");
+                            var tlSpan = document.createElement("span");
+                            tlSpan.innerHTML = " TL";
+                            toplamInput.parentNode.appendChild(tlSpan);
+                        }
+                    </script>
                 </table>
             </div>
         </div>
@@ -196,6 +204,7 @@
     <div style="display: flex;justify-content: center;align-items: center;">
         <button id="yazdir" class="yazdirBtn">Yazdır</button>
     </div>
+    
 
 </body>
 <script>
